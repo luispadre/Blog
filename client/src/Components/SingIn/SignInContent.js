@@ -14,13 +14,8 @@ import Link from "@material-ui/core/Link";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import Tooltip from '@material-ui/core/Tooltip';
-
-
 
 import { Mutation } from "react-apollo";
-
-
 import {Error} from './../Menssages/Error'
 
 
@@ -51,19 +46,16 @@ export default function SigInContent({LOGIN}) {
               // this.props.history.push('/')
           });
       }
-  
-    const validateForm = () => {
-      const {  email, password, passwordConfirmation } = state;
-      const isInvalid =
-         !email || !password || password !== passwordConfirmation;
-      return isInvalid;
-    };
-  
+      const validateForm = () => {
+        const {  email, password, passwordConfirmation } = state;
+        const isInvalid =
+           !email || !password || password !== passwordConfirmation;
+        return isInvalid;
+      };
     const [state, setState] = useState({
-      email: "luis.s@asc",
-      password: "asd",
-      passwordConfirmation: "asd"
-  
+      email: "asd@gil.acom",
+      password: "127as127",
+       
     });
   
     const updateField = e => {
@@ -73,8 +65,7 @@ export default function SigInContent({LOGIN}) {
       });
     };
   
-    const { email, password,passwordConfirmation } = state;
-    
+    const { email, password } = state;
     return (
       <Grid container component="main" className={classes.root}>
         <CssBaseline />
@@ -87,7 +78,6 @@ export default function SigInContent({LOGIN}) {
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-  
             <form
               className={classes.form}
               onSubmit={async e => {
@@ -115,29 +105,12 @@ export default function SigInContent({LOGIN}) {
                 type="password"
                 id="password"
               />
-              <Input
-                required
-                fullWidth
-                value={passwordConfirmation}
-                onChange={updateField}
-                name="passwordConfirmation"
-                label="Confirmar Contraseña"
-                type="password"
-                id="passwordConfirmation"
-              />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               />
-  
-  
              <Mutation mutation={LOGIN} variables={{ email, password }}>
                 {(login,{data,loading,error}) => {
-                  console.log("erroe",error)
-                  console.log("email y password",email,password)
-                  console.log("data",data)
-                  console.log("login",login)
-                  console.log("loading",loading)
                     return(<>         
                   <Button
                     type="submit"
@@ -147,7 +120,7 @@ export default function SigInContent({LOGIN}) {
                     className={classes.submit}
                     onClick={event => handleSubmit(event, login)}
                     
-                    disabled={loading|| validateForm()}
+                    // disabled={loading|| validateForm()}
                   >
                     Iniciar Sesion
                   </Button>
@@ -155,8 +128,7 @@ export default function SigInContent({LOGIN}) {
                   </>)
               
               }}
-              </Mutation> 
-  
+              </Mutation>
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
@@ -171,7 +143,6 @@ export default function SigInContent({LOGIN}) {
                 </Grid>
               </Grid>
               <Box mt={5}>
-                
                 <Copyright />
               </Box>
             </form>

@@ -11,6 +11,8 @@ import {
   SignIn
 } from './../helpers/ConstRouters'
 import Religion from "../Pages/Religion";
+import SignUp from "../Pages/SignUp";
+
 
 
 
@@ -28,6 +30,7 @@ export default memo(function Routes() {
           <Route path="/Servicios" render={()=>(<Layout><Religion/></Layout>)} /> 
           <Route path="/Cargos-Comunitarios" render={()=>(<Layout><Religion/></Layout>)} /> 
           <Route path="/Eventos" render={()=>(<Layout><Religion/></Layout>)} /> 
+          <Route path="/SignUp" render={()=>(<Layout><SignUp/></Layout>)} /> 
           <Route component={NoMatch} />
           
           </Switch>

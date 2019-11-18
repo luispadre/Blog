@@ -29,6 +29,7 @@ module.exports = {
       try {
         const user = await User.findOne({ email: input.email });
         if (!user) {
+          console.log(user)
           throw new Error("User not found");
         }
         if (!user.authenticate(input.password)) {

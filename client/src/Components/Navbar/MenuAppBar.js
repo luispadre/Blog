@@ -110,7 +110,7 @@ export default function MenuAppBar() {
         <Button color="inherit">Iniciar Sesión
         </Button>
       </LinkMenu>
-      <LinkMenu to="/register">
+      <LinkMenu to="/SignUp">
         <Button color="inherit">
           Registrate
         </Button>

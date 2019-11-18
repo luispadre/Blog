@@ -19,7 +19,7 @@ connection();
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(morgan("dev"));
-app.use(cors("*"));
+app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
