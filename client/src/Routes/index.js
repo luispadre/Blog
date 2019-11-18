@@ -12,7 +12,6 @@ import {
   Religion,
   Jobs
 } from './../helpers/ConstRouters'
-import Religion from "../Pages/Religion";
 import SignUp from "../Pages/SignUp";
 
 
