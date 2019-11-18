@@ -1,8 +1,8 @@
 Arguments: 
-  C:\laragon\bin\nodejs\node-v12\node.exe C:\laragon\bin\yarn\bin\yarn.js add apollo-boost react-apollo graphql
+  C:\laragon\bin\nodejs\node-v12\node.exe C:\laragon\bin\yarn\bin\yarn.js install
 
 PATH: 
-  C:\Users\Luis\AppData\Local\Yarn\config\global\node_modules\.bin;C:\Users\Luis\AppData\Roaming\npm;C:\Users\Luis\AppData\Roaming\Composer\vendor\bin;C:\laragon\bin\java\jdk-8u131\\bin;C:\laragon\bin\laragon\utils;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\laragon\bin\php\php-7.2.19-Win32-VC15-x64;C:\laragon\bin\composer;C:\laragon\bin\apache\httpd-2.4.35-win64-VC15\bin;C:\laragon\bin\redis\redis-x64-3.2.100;C:\laragon\bin\nodejs\node-v12;C:\laragon\bin\yarn\bin;C:\laragon\bin\nginx\nginx-1.16.0;C:\laragon\bin\notepad++;C:\laragon\bin\telnet;C:\laragon\bin\ngrok;C:\laragon\bin\git\bin;C:\laragon\bin\git\cmd;C:\laragon\bin\git\usr\bin;C:\laragon\bin\git\mingw64\bin;C:\laragon\bin;C:\laragon\usr\bin;C:\laragon\bin\code;C:\laragon\bin\putty;C:\laragon\bin\cmder\bin;C:\laragon\bin\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\laragon\bin\cmder\vendor\conemu-maximus5;C:\laragon\bin\cmder\vendor\conemu-maximus5\ConEmu;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.2\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\laragon\bin\go\bin;C:\Users\Luis\AppData\Local\Microsoft\WindowsApps;C:\Users\Luis\AppData\Local\Programs\Microsoft VS Code\bin;;C:\laragon\bin\cmder\;
+  C:\Users\josed\AppData\Local\Yarn\config\global\node_modules\.bin;C:\Users\josed\AppData\Roaming\npm;C:\Users\josed\AppData\Roaming\Composer\vendor\bin;C:\laragon\bin\java\jdk-8u131\\bin;C:\laragon\bin\laragon\utils;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\laragon\bin\php\php-7.2.19-Win32-VC15-x64;C:\laragon\bin\composer;C:\laragon\bin\apache\httpd-2.4.35-win64-VC15\bin;C:\laragon\bin\redis\redis-x64-3.2.100;C:\laragon\bin\nodejs\node-v12;C:\laragon\bin\yarn\bin;C:\laragon\bin\nginx\nginx-1.16.0;C:\laragon\bin\notepad++;C:\laragon\bin\telnet;C:\laragon\bin\ngrok;C:\laragon\bin\git\bin;C:\laragon\bin\git\cmd;C:\laragon\bin\git\usr\bin;C:\laragon\bin\git\mingw64\bin;C:\laragon\bin;C:\laragon\usr\bin;C:\laragon\bin\code;C:\laragon\bin\putty;C:\laragon\bin\cmder\bin;C:\laragon\bin\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\laragon\bin\cmder\vendor\conemu-maximus5;C:\laragon\bin\cmder\vendor\conemu-maximus5\ConEmu;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.2\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\laragon\bin\go\bin;C:\laragon\bin;C:\laragon\bin\apache\httpd-2.4.35-win64-VC15\bin;C:\laragon\bin\code;C:\laragon\bin\composer;C:\laragon\bin\git\bin;C:\laragon\bin\git\cmd;C:\laragon\bin\git\mingw64\bin;C:\laragon\bin\git\usr\bin;C:\laragon\bin\java\jdk-8u131\\bin;C:\laragon\bin\laragon\utils;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\laragon\bin\nginx\nginx-1.16.0;C:\laragon\bin\ngrok;C:\laragon\bin\nodejs\node-v12;C:\laragon\bin\notepad++;C:\laragon\bin\php\php-7.2.19-Win32-VC15-x64;C:\laragon\bin\putty;C:\laragon\bin\redis\redis-x64-3.2.100;C:\laragon\bin\telnet;C:\laragon\bin\yarn\bin;C:\laragon\usr\bin;C:\Users\josed\AppData\Local\Yarn\config\global\node_modules\.bin;C:\Users\josed\AppData\Roaming\Composer\vendor\bin;C:\Users\josed\AppData\Roaming\npm;C:\Users\josed\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.4\bin;;C:\laragon\bin\Microsoft VS Code\bin;C:\laragon\bin\git\usr\bin;C:\laragon\bin\git\usr\share\vim\vim74;C:\laragon\bin\cmder\;
 
 Yarn version: 
   1.14.0
@@ -62,14 +62,16 @@ npm manifest:
       "webpack-dev-server": "^3.9.0"
     },
     "dependencies": {
-      
+      "@apollo/react-hooks": "^3.1.3",
       "@material-ui/core": "^4.6.0",
       "@material-ui/icons": "^4.5.1",
       "@material-ui/lab": "^4.0.0-alpha.31",
       "apollo-boost": "^0.4.4",
+      "graphql": "^14.5.8",
       "npm": "^6.13.0",
       "rbx": "^2.2.0",
       "react": "^16.11.0",
+      "react-apollo": "^3.1.3",
       "react-dom": "^16.11.0",
       "react-router-dom": "^5.1.2",
       "style-loader": "^1.0.0",

@@ -8,9 +8,10 @@ import {
   Layout,
   NoMatch,
   UnRegistered,
-  SignIn
+  SignIn,
+  Religion,
+  Jobs
 } from './../helpers/ConstRouters'
-import Religion from "../Pages/Religion";
 
 
 
@@ -24,7 +25,7 @@ export default memo(function Routes() {
           <Route path="/Religion" render={()=>(<Layout><Religion/></Layout>)} /> 
           <Route path="/Noticias" render={()=>(<Layout><Religion/></Layout>)} /> 
           <Route path="/Anuncios" render={()=>(<Layout><Religion/></Layout>)} /> 
-          <Route path="/Bolsa-Trabajo" render={()=>(<Layout><Religion/></Layout>)} /> 
+          <Route path="/Bolsa-Trabajo" render={()=>(<Layout><Jobs/></Layout>)} /> 
           <Route path="/Servicios" render={()=>(<Layout><Religion/></Layout>)} /> 
           <Route path="/Cargos-Comunitarios" render={()=>(<Layout><Religion/></Layout>)} /> 
           <Route path="/Eventos" render={()=>(<Layout><Religion/></Layout>)} /> 
