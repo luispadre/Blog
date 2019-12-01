@@ -13,6 +13,7 @@ import {
   Jobs
 } from './../helpers/ConstRouters';
 import SignUp from "../Pages/SignUp";
+import Cargos from "../Pages/Cargos";
 
 
 
@@ -29,9 +30,9 @@ export default memo(function Routes() {
           <Route path="/Anuncios" render={()=>(<Layout><Religion/></Layout>)} /> 
           <Route path="/Bolsa-Trabajo" render={()=>(<Layout><Jobs/></Layout>)} /> 
           <Route path="/Servicios" render={()=>(<Layout><Religion/></Layout>)} /> 
-          <Route path="/Cargos-Comunitarios" render={()=>(<Layout><Religion/></Layout>)} /> 
           <Route path="/Eventos" render={()=>(<Layout><Religion/></Layout>)} /> 
           <Route path="/SignUp" render={()=>(<Layout><SignUp/></Layout>)} /> 
+          <Route path="/Cargos-Comunitarios" render={()=>(<Layout><Cargos/></Layout>)} /> 
           <Route component={NoMatch} />
           
           </Switch>

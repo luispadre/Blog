@@ -18,7 +18,6 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import { Mutation } from "react-apollo";
 import {Error} from './../Menssages/Error'
 import { AuthContext} from './../../Context/AuthContext';
-import { useApolloClient, useMutation } from '@apollo/react-hooks';
 
 
 
@@ -37,9 +36,6 @@ function Copyright() {
 
 
 export default function SigInContent({LOGIN}) {
-
-
-
   const { handleSubmit } = useContext(AuthContext);
     const classes = useStyles();
       const validateForm = () => {
@@ -106,12 +102,7 @@ export default function SigInContent({LOGIN}) {
               />
 
   
-             <Mutation mutation={LOGIN,{
-                onCompleted({ login }) {
-                  localStorage.setItem('token', login);
-                  client.writeData({ data: { isLoggedIn: true } });
-                }
-             }} variables={{ email, password }}>
+             <Mutation mutation={LOGIN} variables={{ email, password }}>
                 {(login,{data,loading,error}) => {
                     return(<>         
                   <Button

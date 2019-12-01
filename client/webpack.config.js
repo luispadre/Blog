@@ -42,6 +42,9 @@ module.exports = {
     // host:'0.0.0.0',
     // port:8080,
   },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./public/index.html",
