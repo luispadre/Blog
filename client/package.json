@@ -31,7 +31,8 @@
     "sass-loader": "^8.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.9.0",
+    "webpack-lighthouse-plugin": "^1.0.5"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",

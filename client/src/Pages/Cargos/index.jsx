@@ -1,76 +1,96 @@
 import React from 'react'
 import { Card, Col, Row } from 'antd';
 import { Tag } from 'antd';
-
-
+import { Input } from 'antd';
+import { Column, Notification } from 'rbx'
+const { Search } = Input;
 const { Meta } = Card;
 export default function Cargos() {
     return (<>
         <div style={{ background: '#ECECEC', padding: '30px' }}>
-        <Tag color="#f50">Delegación</Tag>
 
+            <Search
+                placeholder="Buscar un cargo ..."
+                onSearch={value => console.log(value)}
+                style={{ width: "100%" }}
+            />
+            <Tag color="#f50">Delegación</Tag>
+            <Column.Group>
 
-            <Row gutter={16}>
-                <Col span={8}>
-                <Card
-                        hoverable
-                        style={{ width: 240 }}
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                    >
-                        <Meta title="Europe Street beat" description="www.instagram.com" />
-                    </Card>
-                </Col>
-                <Col span={8}>
-                <Card
-                        hoverable
-                        style={{ width: 240 }}
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                    >
-                        <Meta title="Europe Street beat" description="www.instagram.com" />
-                    </Card>
-                </Col>
-                <Col span={8}>
+            <Column >
+                    <Notification color="primary" textAlign="centered">
+                        <Card
+                            hoverable
+                            
+                            cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                        >
+                            <Meta title="Europe Street beat" description="www.instagram.com" />
+                        </Card>
+                    </Notification>
+                </Column>
+                <Column >
+                    <Notification color="primary" textAlign="centered">
+                        <Card
+                            hoverable
+                            
+                            cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                        >
+                            <Meta title="Europe Street beat" description="www.instagram.com" />
+                        </Card>
+                    </Notification>
+                </Column>
+                <Column >
+                    <Notification color="primary" textAlign="centered">
+                        <Card
+                            hoverable
+                            
+                            cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                        >
+                            <Meta title="Europe Street beat" description="www.instagram.com" />
+                        </Card>
+                    </Notification>
+                </Column>
 
-                    <Card
-                        hoverable
-                        style={{ width: 240 }}
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                    >
-                        <Meta title="Europe Street beat" description="www.instagram.com" />
-                    </Card>
-                </Col>
-            </Row>
+            </Column.Group>
+
             <Tag color="#A980E2">Servicio y Vigilancia</Tag>
-            <Row gutter={16}>
-                <Col span={8}>
-                <Card
-                        hoverable
-                        style={{ width: 240 }}
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                    >
-                        <Meta title="Europe Street beat" description="www.instagram.com" />
-                    </Card>
-                </Col>
-                <Col span={8}>
-                <Card
-                        hoverable
-                        style={{ width: 240 }}
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                    >
-                        <Meta title="Europe Street beat" description="www.instagram.com" />
-                    </Card>
-                </Col>
-                <Col span={8}>
+            <Column.Group>
 
-                    <Card
-                        hoverable
-                        style={{ width: 240 }}
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                    >
-                        <Meta title="Europe Street beat" description="www.instagram.com" />
-                    </Card>
-                </Col>
-            </Row>
+<Column >
+        <Notification color="primary" textAlign="centered">
+            <Card
+                hoverable
+                
+                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+            >
+                <Meta title="Europe Street beat" description="www.instagram.com" />
+            </Card>
+        </Notification>
+    </Column>
+    <Column >
+        <Notification color="primary" textAlign="centered">
+            <Card
+                hoverable
+                
+                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+            >
+                <Meta title="Europe Street beat" description="www.instagram.com" />
+            </Card>
+        </Notification>
+    </Column>
+    <Column >
+        <Notification color="primary" textAlign="centered">
+            <Card
+                hoverable
+                
+                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+            >
+                <Meta title="Europe Street beat" description="www.instagram.com" />
+            </Card>
+        </Notification>
+    </Column>
+
+</Column.Group>
         </div>
     </>)
 }

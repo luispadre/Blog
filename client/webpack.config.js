@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const WebpackLighthousePlugin = require('webpack-lighthouse-plugin');
 
 module.exports = {
   module: {
@@ -52,6 +53,6 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'css/mystyles.css'
-    }),
+    })
   ]
 };

@@ -11,3 +11,8 @@ module.exports.users=[
     {id:"3",name:"Gregorio",email:"goyo@gmail.com"},
     {id:"4",name:"Hortencia",email:"horte@gmail.com"}
 ]
+
+module.exports.cargos=[
+    {id:"1",name:"delegación"},
+    {id:"2",name:"Sevicio y Vilancia"}
+]
