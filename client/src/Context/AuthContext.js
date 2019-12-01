@@ -8,12 +8,24 @@ function  AuthContextProvider({children}){
     token:''
   })
 
-   function toggleAuth() {
-    setState({ isAuthenticated: !state.isAuthenticated });
-  }
+  function handleSubmit  (event, signupUser) {
+    event.preventDefault();
+    signupUser().then(async ({ data }) => {
+        const {login}=data
+        setState({
+          ...state,
+          token:login.token,
+          isAuthenticated:!state.isAuthenticated
+        });
+        //localStorage.setItem('token', data.signupUser.token);
+        //await this.props.refetch();
+        // clearState();
+        // this.props.history.push('/')
+    });
+}
   
     return (
-      <AuthContext.Provider value={{...state, toggleAuth: toggleAuth}}>
+      <AuthContext.Provider value={{...state,handleSubmit:handleSubmit}}>
         {children}
       </AuthContext.Provider>
     );

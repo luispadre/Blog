@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Input } from "./../Input";
 import { useStyles } from "./styles";
 import Avatar from "@material-ui/core/Avatar";
@@ -17,6 +17,9 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
 import { Mutation } from "react-apollo";
 import {Error} from './../Menssages/Error'
+import { AuthContext} from './../../Context/AuthContext';
+import { useApolloClient, useMutation } from '@apollo/react-hooks';
+
 
 
 function Copyright() {
@@ -34,28 +37,20 @@ function Copyright() {
 
 
 export default function SigInContent({LOGIN}) {
+
+
+
+  const { handleSubmit } = useContext(AuthContext);
     const classes = useStyles();
-  
-    const handleSubmit = (event, signupUser) => {
-          event.preventDefault();
-          signupUser().then(async ({ data }) => {
-              console.log(data);
-              //localStorage.setItem('token', data.signupUser.token);
-              //await this.props.refetch();
-              // clearState();
-              // this.props.history.push('/')
-          });
-      }
       const validateForm = () => {
-        const {  email, password, passwordConfirmation } = state;
+        const {  email, password,  } = state;
         const isInvalid =
-           !email || !password || password !== passwordConfirmation;
+           !email || !password
         return isInvalid;
       };
     const [state, setState] = useState({
       email: "asd@gil.acom",
-      password: "127as127",
-       
+      password: "127as127"
     });
   
     const updateField = e => {
@@ -109,7 +104,14 @@ export default function SigInContent({LOGIN}) {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               />
-             <Mutation mutation={LOGIN} variables={{ email, password }}>
+
+  
+             <Mutation mutation={LOGIN,{
+                onCompleted({ login }) {
+                  localStorage.setItem('token', login);
+                  client.writeData({ data: { isLoggedIn: true } });
+                }
+             }} variables={{ email, password }}>
                 {(login,{data,loading,error}) => {
                     return(<>         
                   <Button
@@ -120,7 +122,7 @@ export default function SigInContent({LOGIN}) {
                     className={classes.submit}
                     onClick={event => handleSubmit(event, login)}
                     
-                    // disabled={loading|| validateForm()}
+                    disabled={loading|| validateForm()}
                   >
                     Iniciar Sesion
                   </Button>

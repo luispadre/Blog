@@ -11,7 +11,7 @@ import {
   SignIn,
   Religion,
   Jobs
-} from './../helpers/ConstRouters'
+} from './../helpers/ConstRouters';
 import SignUp from "../Pages/SignUp";
 
 
